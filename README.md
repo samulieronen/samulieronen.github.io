@@ -1,6 +1,6 @@
 # samulieronen.github.io
 
-[Go check it out!](https://www.samulieronen.github.io)
+[Go check it out!](https://samulieronen.github.io)
 
 Notes:<br>
 1. Update 18.1.
