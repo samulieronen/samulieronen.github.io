@@ -1,0 +1,67 @@
+    body {
+    font-family: OCR A Std, monospace;
+    background-color: #121111;
+    background-image: url("../assets/circuit_wallpaper.jpg");
+  }
+  
+  .jumbotron {
+    display: flex;
+    align-items: center;
+    background-image: url("../assets/background.png");
+    background-size: cover;
+    filter: blur(2px);
+    color: #e8d612;
+    height: 200px;
+  }
+  
+  .h3primary {
+    font-size: 25px;
+  }
+
+  .col-sm-3 {
+    font-family: OCR A Std, monospace;
+    color: #e8d612;
+    font-size: 15px;
+  }
+
+  .navbar-brand {
+    color: #ffffff;
+    font-size: 25px;
+  }
+
+  .navbar-brand:hover {
+    color: #e8d612;
+    font-size: 25px;
+  }
+
+  .container-fluid {
+    color: #fefefe;
+  }
+
+  .img {
+    border-radius: 5px;
+    filter: blur(2px);
+  }
+
+  .img:hover {
+    filter: blur(0px);
+  }
+
+  footer {
+    font-size: 10px;
+  }
+
+  .projecttext {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .gitlink {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .gitlink:hover {
+    color: #e8d612;
+    text-align: center;
+  }
