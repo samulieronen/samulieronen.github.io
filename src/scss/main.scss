@@ -1,0 +1,254 @@
+/*
+**  main.scss
+**      samulieronen.github.io
+*/
+
+/* Color Palette */
+
+$shade: #424642;
+$accent1: #d44000;
+$accent2: #ffa500;
+$background: #262625;
+$font: #eeeeee;
+
+//
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap');
+
+//
+
+
+/* Section specific imports */
+
+
+
+//
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h5, p {
+    font-family: 'Noto Serif JP', serif;
+    color: $font;
+}
+
+.page-wrapper {
+    background-color: $background;
+    min-height: 100vh;
+
+    &:before {
+        content: "";
+        right: 2vh;
+        top: 2vh;
+        position: absolute;
+        width: 20vw;
+        height: 20vh;
+        border: solid 8px $accent1;
+        border-radius: 4px;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    h3.big {
+        font-size: 40px;
+        margin: 0;
+    }
+}
+
+.imax {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin-top: 10vh;
+
+    h3 {
+        font-size: 40px;
+        margin: 0;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+
+    .image {
+        position: relative;
+        height: calc(20vw * 1.72);
+        width: 30vw;
+        min-height: 400px;
+        min-width: 300px;
+        background-image: url("../assets/wall.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px;
+        margin: 0vw 6vw 6vw 0vw;
+        z-index: 99;
+
+        &:before {
+            content: "";
+            left: 10px;
+            top: 10px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: solid 8px $shade;
+            border-radius: 4px;
+            border-left: none;
+            border-top: none;
+            transition: all 0.5s ease;
+        }
+
+        &:hover::before {
+            border: solid 8px $accent2;
+            border-left: none;
+            border-top: none;
+        }
+    }
+
+    .textbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: calc(20vw * 1.72);
+        margin-top: 4vh;
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+
+    #project-heading {
+        align-self: flex-start;
+        margin-left: 10vw;
+        margin-top: 2vh;
+    }
+
+    .box-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 4vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+
+        .content-box {
+            min-width: 300px;
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 40px;
+            border-radius: 4px;
+            border: solid 8px $shade;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+            transition: all 0.5s ease;
+
+            &:hover {
+                border: solid 8px $accent2;
+                border-right: none;
+                border-top: none;
+                border-bottom: none;
+            }
+
+            .project-textbox {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 40px;
+
+                .project-header {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover h3 {
+                            color: $accent2;
+                        }
+                    }
+                }
+
+                .hashtag-wrapper {
+                    display: flex;
+                    flex-flow: row wrap;
+
+                    .hash {
+                        background-color: $accent1;
+                        color: black;
+                        margin-right: 10px;
+                        padding: 2px 6px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            .gitlink {
+                background-image: url("../assets/github.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 20px;
+                width: 20px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .brackets {
+        margin: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: $accent2;
+        padding-top: 4px;
+
+        &.one {
+            margin-left: 4%;
+        }
+    }
+}
+
+.hki {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    background-image: url("../assets/helsinki.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top: 10px solid $shade;
+    filter: grayscale(20%);
+}
+
+.footer {
+    
+    display: flex;
+    color: #fafafa;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    background-color: $shade;
+}
